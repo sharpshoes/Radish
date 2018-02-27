@@ -4,7 +4,7 @@ package org.sharpshoes.radish.entity;
 public class ApiEntity extends BaseEntity{
 
 	private Long id;
-	private String key;
+	private String code;
 	private String command;
 	
 	public Long getId() {
@@ -13,17 +13,17 @@ public class ApiEntity extends BaseEntity{
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getKey() {
-		return key;
-	}
-	public void setKey(String key) {
-		this.key = key;
-	}
 	public String getCommand() {
 		return command;
 	}
 	public void setCommand(String command) {
 		this.command = command;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
 	}
 	
 }
