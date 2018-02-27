@@ -55,7 +55,7 @@ public interface BaseMapper<T extends BaseEntity>{
 		return sqlBuffer.toString();
     }
     
-    default String udpateSql() {
+    default String updateSql() {
     	Class<T> tType = this.getEntityType();
 		String tableName = getTableName(tType);
 		

@@ -2,6 +2,7 @@ package org.sharpshoes.radish.mapper;
 
 import org.apache.ibatis.annotations.DeleteProvider;
 import org.apache.ibatis.annotations.InsertProvider;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.UpdateProvider;
 import org.sharpshoes.radish.entity.ApiEntity;
@@ -9,10 +10,11 @@ import org.sharpshoes.radish.entity.ApiEntity;
 public interface ApiMapper extends BaseMapper<ApiEntity>{
 	
 	@InsertProvider(type=ApiMapper.class, method="insertSql")
+	@Options(useGeneratedKeys = true)
 	public void save(ApiEntity t);
 	@DeleteProvider(type=ApiMapper.class, method="deleteSql")
 	public void delete(Long id);
-	@UpdateProvider(type=ApiMapper.class, method="udpateSql")
+	@UpdateProvider(type=ApiMapper.class, method="updateSql")
 	public void update(ApiEntity t);
 	@SelectProvider(type=ApiMapper.class, method="selectSql")
 	public void getAll();

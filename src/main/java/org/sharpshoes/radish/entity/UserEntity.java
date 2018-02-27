@@ -6,22 +6,22 @@ import java.util.Date;
 public class UserEntity extends BaseEntity {
 
 	private Long id;
-	private String login_name;
+	private String logon_name;
 	private String nick_name;
 	private String password;
 	private Date create_time;
 	
+	public String getLogon_name() {
+		return logon_name;
+	}
+	public void setLogon_name(String logon_name) {
+		this.logon_name = logon_name;
+	}
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public String getLogin_name() {
-		return login_name;
-	}
-	public void setLogin_name(String login_name) {
-		this.login_name = login_name;
 	}
 	public String getNick_name() {
 		return nick_name;

@@ -14,4 +14,13 @@ public abstract class BaseService<T extends BaseEntity> {
 	public void delete(Long id) {
 		this.getMapper().delete(id);
 	}
+	
+	public void update(T t) {
+		this.getMapper().update(t);
+	}
+	
+	public T getOne(Long id) {
+		return this.getOne(id);
+	}
+	
 }
