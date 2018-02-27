@@ -1,5 +1,6 @@
 package org.sharpshoes.radish;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @ComponentScan({"org.sharpshoes.radish"})
+@MapperScan("org.sharpshoes.radish.mapper")
 @EnableTransactionManagement
 @EnableAutoConfiguration
 @SpringBootApplication
