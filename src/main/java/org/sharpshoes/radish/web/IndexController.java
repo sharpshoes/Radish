@@ -26,7 +26,7 @@ public class IndexController {
 		if ("post".equals(method.toLowerCase())){
 			Map<String, String> errorMessage = new HashMap<String, String>();
 			
-			String logon_name = request.getParameter("logonName");
+			String logon_name = request.getParameter("logon_name");
 			String password = request.getParameter("password");
 			
 			
@@ -45,7 +45,7 @@ public class IndexController {
 				return new ModelAndView("logon", errorMessage);
 			} else {
 				request.getSession().setAttribute(Constants.SESSION_LOGON_USER, logonUser);
-				return new ModelAndView("redirect:index");
+				return new ModelAndView("redirect:/portal/index");
 			}
 		} else {
 			return new ModelAndView("logon");

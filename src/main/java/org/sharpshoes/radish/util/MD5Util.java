@@ -125,4 +125,12 @@ public class MD5Util {
 		return byteToHexString(pwd);
 	}
 	
+	public static void main(String[] args) {
+		try {
+			System.out.println(MD5Util.getEncryptedPwd("123456"));
+			System.out.println(MD5Util.validPassword("123456", "CE474588F9D000A588964D3114A7DA62DE2DED920A41BFA2E3DC94A4"));
+		} catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+	}
 }
