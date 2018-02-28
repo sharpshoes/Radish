@@ -1,36 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>会员网络图</title>
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="format-detection" content="telephone=no">
-	<!-- 公用部分 start-->
-	<link rel="stylesheet" href="../../libs/layui/css/layui.css">
-	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.css" media="all">
-	<link rel="stylesheet" href="../../static/admin/css/global.css">
-	<link rel="stylesheet" type="text/css" href="../../static/admin/css/iframe_inner.css" media="all">
-	<script src="../../libs/jquery-1.12.0.min.js"></script>
-	<script src="../../libs/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../../libs/vue.js"></script>
-	<script src="../../libs/layui/layui.js"></script>
-	<script src="../../libs/mock-min.js"></script>
-	<script src="../../libs/base.js"></script>
-	<!-- 公用部分 end-->
+
+	<title>会员列表</title>
+	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	
 </head>
 <body>
 <section class="layui-larry-box">
 	<div class="larry-personal">
 		<header class="larry-personal-tit">
-			<span>会员网络图</span>
+			<span>会员列表</span>
 			<label class="pull-right">
 				<input @keyup.enter="search" v-model="keyword" placeholder="搜索" type="text" class="layui-icon-search baseSearch">
 				<a href="m_member_add.html" class="layui-btn layui-btn-sm layui-btn-normal">添加会员</a>
 			</label>
+
 		</header><!-- /header -->
 		<div class="larry-personal-body clearfix changepwd">
 			<table class="layui-table">
@@ -116,7 +103,7 @@
 		</div>
 	</div>
 </section>
-<script src="../../static/admin/js/m_member_list.js"></script>
+<script src="/static/admin/js/m_member_list.js"></script>
 
 </body>
 </html>

@@ -1,18 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
 	<title>layout 后台大布局 - Layui</title>
 	<!-- 公用部分 start-->
-	<link rel="stylesheet" href="../../libs/layui/css/layui.css">
-	<link rel="stylesheet" href="../../static/admin/css/global.css">
-	<script src="../../libs/jquery-1.12.0.min.js"></script>
-	<script src="../../libs/vue.js"></script>
-	<script src="../../libs/base.js"></script>
+	<link rel="stylesheet" href="/static/libs/layui/css/layui.css">
+	<link rel="stylesheet" href="/static/admin/css/global.css">
+	<script src="/static/libs/jquery-1.12.0.min.js"></script>
+	<script src="/static/libs/vue.js"></script>
+	<script src="/static/libs/base.js"></script>
 	<!-- 公用部分 end-->
 
-	<link rel="stylesheet" href="../../static/admin/css/adminstyle.css">
+	<link rel="stylesheet" href="/static/admin/css/adminstyle.css">
 </head>
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
@@ -238,7 +239,7 @@
 			</ul>
 			<div class="layui-tab-content" style="min-height: 150px; height: 123px;">
 				<div class="layui-tab-item layui-show">
-					<iframe class="larry-iframe" data-id="0" src="my_main.html" style="height: 150px;"></iframe>
+					<iframe class="larry-iframe" data-id="0" src="f_bonus.html" style="height: 150px;"></iframe>
 				</div>
 			</div>
 		</div>
@@ -251,9 +252,9 @@
 		© layui.com - 底部固定区域
 	</div>
 </div>
-<script src="../../libs/layui/layui.js"></script>
-<script src="../../static/admin/js/larry.js"></script>
-<script src="../../static/admin/js/index.js"></script>
+<script src="/static/libs/layui/layui.js"></script>
+<script src="/static/admin/js/larry.js"></script>
+<script src="/static/admin/js/index.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function(){
