@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>奖金审核</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 公用部分 start-->
+	<link rel="stylesheet" href="../../libs/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="../../libs/bootstrap/css/bootstrap.css" media="all">
+	<link rel="stylesheet" href="../../static/admin/css/global.css">
+	<link rel="stylesheet" type="text/css" href="../../static/admin/css/iframe_inner.css" media="all">
+	<script src="../../libs/jquery-1.12.0.min.js"></script>
+	<script src="../../libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../libs/vue.js"></script>
+	<script src="../../libs/layui/layui.js"></script>
+	<script src="../../libs/mock-min.js"></script>
+	<script src="../../libs/base.js"></script>
+	<!-- 公用部分 end-->
+</head>
+<body>
+<section class="layui-larry-box">
+	<div class="larry-personal">
+		<header class="larry-personal-tit">
+			<span>奖金审核</span>
+			<label class="pull-right">
+				<button id="selectDate" type="button" class="layui-btn layui-btn-sm layui-btn-primary" v-text="selectDate"></button><span style="margin-left:6px;" class="caret"></span>
+			</label>
+		</header><!-- /header -->
+		<div class="larry-personal-body clearfix changepwd">
+			<table class="layui-table" id="layTable" lay-filter="layTable">
+				<thead>
+				<tr>
+					<th class="text-center">编号</th>
+					<th>用户名</th>
+					<th>直推奖金</th>
+					<th>代数奖</th>
+					<th>碰对奖</th>
+					<th lay-data="{sort:true}">报单中心</th>
+					<th>总计</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr v-for="(user,index) in userList" v-if="!loading && userList.length > 0">
+					<td class="text-center" v-text="user.id"></td>
+					<td v-text="user.userName"></td>
+					<td>{{ base.stringsplit(user.directBonus) }}</td>
+					<td>{{ base.stringsplit(user.combinationBonus) }}</td>
+					<td>{{ base.stringsplit(user.childsBonus) }}</td>
+					<td v-text="user.storeId"></td>
+					<td>{{ base.stringsplit( user.directBonus + user.combinationBonus + user.childsBonus) }}</td>
+				</tr>
+				<tr v-if="!loading && userList.length > 0">
+					<td colspan="7" class="text-right">
+						<label style="margin-right:10px;">总计：{{ base.stringsplit(moneyCount) }}</label>
+						<button type="button" class="layui-btn layui-btn-normal" @click="auditBonus">审核并发放奖金</button>
+					</td>
+				</tr>
+				<tr v-if="!loading && userList.length == 0">
+					<td colspan="7" style="text-align: center;">没有数据</td>
+				</tr>
+				<tr v-if="loading">
+					<td colspan="7" style="text-align: center;">加载中...</td>
+				</tr>
+
+				</tbody>
+			</table>
+
+			<div id="pageList"></div>
+		</div>
+	</div>
+</section>
+<script src="../../static/admin/js/f_bonus.js"></script>
+</body>
+</html>
