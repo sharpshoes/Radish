@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/direct-sale")
-public class LogonController {
+@RequestMapping("/index")
+public class IndexController {
 
 	@Autowired
 	private UserService userService;
@@ -58,9 +58,5 @@ public class LogonController {
 		request.getSession().setAttribute(Constants.SESSION_LOGON_USER, null);
 		return new ModelAndView("redirect:logon");
 	}
-	
-	@RequestMapping("/index")
-	public ModelAndView index() {
-		return new ModelAndView("index");
-	}
+
 }
