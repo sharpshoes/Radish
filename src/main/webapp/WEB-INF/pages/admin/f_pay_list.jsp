@@ -5,9 +5,9 @@
 <head>
 	
 	<title>充值列表</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
 	
-	<link rel="stylesheet" type="text/css" href="/static/admin/css/f_pay_list.css" media="all">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/f_pay_list.css" media="all">
 </head>
 <body>
 <section class="layui-larry-box">

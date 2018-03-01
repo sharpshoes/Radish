@@ -12,10 +12,14 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.sharpshoes.radish.rest.RestResponse;
+import org.sharpshoes.radish.util.BusinessException;
 import org.sharpshoes.radish.util.Constants;
 
-@WebFilter(filterName="authFilter", urlPatterns = {"/admin/*"})
-public class AuthFilter implements Filter {
+import com.alibaba.fastjson.JSON;
+
+@WebFilter(filterName="authFilter", urlPatterns = {"/api/*"})
+public class RestAuthFilter implements Filter {
 
 	@Override
 	public void destroy() {
@@ -27,7 +31,16 @@ public class AuthFilter implements Filter {
 			throws IOException, ServletException {
 		HttpServletRequest httpRequest = (HttpServletRequest)request;
 		if (httpRequest.getSession().getAttribute(Constants.SESSION_LOGON_USER) == null) {
-			((HttpServletResponse)response).sendRedirect("/index/logon");
+			HttpServletResponse httpResponse = (HttpServletResponse)response;
+			httpResponse.setContentType("application/json");
+			
+			RestResponse rest = new RestResponse();
+			rest.setCode(BusinessException.ERROR_NOT_AUTH);
+			rest.setMessage("用户未登录！");
+			
+			String objJson = JSON.toJSONString(rest);
+			response.getWriter().print(objJson);
+			
 		} else {
 			arg2.doFilter(httpRequest, response);
 		}

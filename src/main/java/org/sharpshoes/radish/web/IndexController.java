@@ -45,7 +45,7 @@ public class IndexController {
 				return new ModelAndView("logon", errorMessage);
 			} else {
 				request.getSession().setAttribute(Constants.SESSION_LOGON_USER, logonUser);
-				return new ModelAndView("redirect:/portal/index");
+				return new ModelAndView("redirect:/admin/index");
 			}
 		} else {
 			return new ModelAndView("logon");

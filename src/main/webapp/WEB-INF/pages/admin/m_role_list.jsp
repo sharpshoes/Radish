@@ -5,7 +5,7 @@
 <head>
 
 	<title>角色列表</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
 	
 </head>
 <body>

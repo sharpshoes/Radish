@@ -5,9 +5,9 @@
 <head>
 	
 	<title>产品管理</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
 	
-	<link rel="stylesheet" href="/static/admin/css/p_product_list.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/admin/css/p_product_list.css">
 
 </head>
 <body>

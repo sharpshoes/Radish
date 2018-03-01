@@ -5,8 +5,7 @@
 <head>
 
 	<title>会员列表</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
-	
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
 </head>
 <body>
 <section class="layui-larry-box">

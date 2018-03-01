@@ -8,12 +8,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
 <!-- 公用部分 start-->
-<link rel="stylesheet" href="/static/libs/layui/css/layui.css">
-<link rel="stylesheet" type="text/css" href="/static/libs/bootstrap/css/bootstrap.css" media="all">
-<link rel="stylesheet" href="/static/admin/css/global.css">
-<link rel="stylesheet" type="text/css" href="/static/admin/css/iframe_inner.css" media="all">
-<script src="/static/libs/jquery-1.12.0.min.js"></script>
-<script src="/static/libs/vue.js"></script>
-<script src="/static/libs/layui/layui.js"></script>
-<script src="/static/libs/base.js"></script>
+<link rel="stylesheet" href="<%=request.getContextPath()%>/static/libs/layui/css/layui.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/libs/bootstrap/css/bootstrap.css" media="all">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/static/admin/css/global.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/iframe_inner.css" media="all">
+<script src="<%=request.getContextPath()%>/static/libs/jquery-1.12.0.min.js"></script>
+<script src="<%=request.getContextPath()%>/static/libs/vue.js"></script>
+<script src="<%=request.getContextPath()%>/static/libs/layui/layui.js"></script>
+<script src="<%=request.getContextPath()%>/static/libs/base.js"></script>
 <!-- 公用部分 end-->

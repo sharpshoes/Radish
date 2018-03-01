@@ -6,9 +6,9 @@
 
 
 	<title>Home</title>
- 	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
  	
-	<link rel="stylesheet" type="text/css" href="/static/admin/css/main.css" media="all">
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/main.css" media="all">
 </head>
 <body>
 <section class="larry-wrapper">

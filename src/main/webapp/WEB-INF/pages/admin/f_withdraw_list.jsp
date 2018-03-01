@@ -5,9 +5,8 @@
 <head>
 	
 	<title>提现管理</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
-	
-	<link rel="stylesheet" href="/static/admin/css/f_withdraw_list.css">
+<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/static/admin/css/f_withdraw_list.css">
 </head>
 <body>
 <section class="layui-larry-box">

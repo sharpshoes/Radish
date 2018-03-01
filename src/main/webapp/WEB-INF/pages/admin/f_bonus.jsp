@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<title>奖金审核</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>
 </head>
 <body>
 <section class="layui-larry-box">

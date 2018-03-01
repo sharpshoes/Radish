@@ -5,7 +5,7 @@
 <head>
 
 	<title>系统设置</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
 	
 </head>
 <body>

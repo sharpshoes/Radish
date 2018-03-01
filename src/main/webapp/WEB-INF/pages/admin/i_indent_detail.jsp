@@ -5,9 +5,8 @@
 <head>
 	
 	<title>订单管理</title>
-	<jsp:include page=”../common/baseFile.jsp” flush=”true” />
-	
-	<link rel="stylesheet" type="text/css" href="/static/admin/css/i_indent_detail.css" media="all">
+	<jsp:include page="..//common/baseFile.jsp"></jsp:include>	
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/static/admin/css/i_indent_detail.css" media="all">
 </head>
 <body>
 <section class="layui-larry-box">

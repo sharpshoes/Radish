@@ -9,7 +9,7 @@ public class BusinessException extends Exception {
 
 	public static final Integer ERROR_USER = 100;
 	public static final Integer ERROR_INNER = 200;
-	
+	public static final Integer ERROR_NOT_AUTH = 300;
 	private Integer code = ERROR_USER;
 	private String message;
 	
